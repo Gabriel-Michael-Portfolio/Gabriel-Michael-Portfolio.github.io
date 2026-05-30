@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Gabriel Michael Portfolio</title>
+		<title>Dimension by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -37,17 +37,258 @@
 				.project-item {
 					flex-direction: column !important;
 				}
-				.project-item img {
-					width: 120px !important;
-					height: 120px !important;
+				#work .project-item-logo,
+				#work .project-item-thumbs {
+					align-self: center;
+					width: 100% !important;
+					max-width: 280px;
+				}
+				#work .project-profile-img,
+				#work .project-logo-img {
 					margin: 0 auto;
 				}
-				#about img {
+				#about .about-headshot {
 					float: none !important;
 					width: 250px !important;
 					height: 250px !important;
 					margin: 0 auto 1.5rem auto !important;
 					display: block;
+				}
+			}
+			#header {
+				width: 100%;
+				max-width: 52rem;
+				margin: 0 auto;
+			}
+			#header .content .inner {
+				padding: 3.5rem 3rem;
+			}
+			#header .content .inner h1 {
+				font-size: 3rem;
+				letter-spacing: 0.6rem;
+			}
+			#header .content p {
+				font-size: 1rem;
+			}
+			#header nav {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+			#header nav ul {
+				width: 100%;
+				max-width: 48rem;
+			}
+			#header nav ul li {
+				flex: 1;
+			}
+			#header nav ul li a {
+				min-width: 0;
+				width: 100%;
+				height: 3.5rem;
+				line-height: 3.5rem;
+				font-size: 1rem;
+				padding: 0 1.5rem;
+				text-align: center;
+			}
+			@media screen and (max-width: 736px) {
+				#header .content .inner h1 {
+					font-size: 2.25rem;
+					letter-spacing: 0.4rem;
+				}
+				#header nav ul li a {
+					height: 3.25rem;
+					line-height: 3.25rem;
+					font-size: 0.9rem;
+				}
+			}
+			html:has(body.is-article-visible),
+			body.is-article-visible {
+				scrollbar-width: none;
+				-ms-overflow-style: none;
+			}
+			html:has(body.is-article-visible)::-webkit-scrollbar,
+			body.is-article-visible::-webkit-scrollbar {
+				display: none;
+				width: 0;
+				height: 0;
+			}
+			#work .project-item {
+				display: flex;
+				align-items: flex-start;
+				gap: 2rem;
+				padding-bottom: 3rem;
+				margin-bottom: 3rem;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+			}
+			#work .project-item:last-child {
+				padding-bottom: 0;
+				margin-bottom: 0;
+				border-bottom: none;
+			}
+			#work .project-item a {
+				border-bottom: none;
+				border-radius: 4px;
+				overflow: hidden;
+				display: block;
+				transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+			}
+			#work .project-item-logo a:has(.project-profile-img),
+			#work .project-item-logo a:has(.project-logo-img) {
+				border-radius: 50%;
+				display: inline-block;
+				overflow: hidden;
+			}
+			#work .project-item-logo a:has(.project-logo-img) {
+				width: 145px;
+				height: 145px;
+			}
+			#work .project-item a:hover {
+				box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85), 0 8px 24px rgba(0, 0, 0, 0.35);
+				transform: translateY(-2px);
+			}
+			#work .project-item:has(.project-profile-img),
+			#work .project-item:has(.project-logo-img) {
+				align-items: center;
+			}
+			#work .project-profile-img {
+				width: 145px;
+				height: 145px;
+				border-radius: 50%;
+				object-fit: cover;
+				object-position: center 12%;
+				display: block;
+				cursor: pointer;
+			}
+			#work .project-logo-img {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				object-fit: cover;
+				object-position: center;
+				display: block;
+				cursor: pointer;
+				transform: scale(1.05);
+			}
+			#work .project-thumb {
+				width: 100%;
+				aspect-ratio: 16/9;
+				object-fit: cover;
+				border-radius: 4px;
+				display: block;
+				cursor: pointer;
+			}
+			#work .project-item-thumbs {
+				flex-shrink: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				width: 200px;
+			}
+			#work .project-item-logo {
+				flex-shrink: 0;
+			}
+			#work .project-item-logo:has(.project-profile-img),
+			#work .project-item-logo:has(.project-logo-img) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-self: center;
+			}
+			#information .info-panel {
+				border: 1px solid rgba(255, 255, 255, 0.25);
+				border-radius: 4px;
+				padding: 2rem 2.25rem;
+				margin-bottom: 2.5rem;
+				background: rgba(255, 255, 255, 0.04);
+			}
+			#information .info-panel > p {
+				margin-top: 0;
+				margin-bottom: 1.75rem;
+				opacity: 0.85;
+			}
+			#information .info-details {
+				display: flex;
+				flex-direction: column;
+				gap: 1.25rem;
+			}
+			#information .info-row {
+				display: flex;
+				align-items: center;
+				gap: 1.25rem;
+				padding: 1rem 1.25rem;
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 4px;
+				background: rgba(0, 0, 0, 0.2);
+			}
+			#information .info-row .icon {
+				flex-shrink: 0;
+				width: 2.75rem;
+				height: 2.75rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				border: 1px solid rgba(255, 255, 255, 0.3);
+				font-size: 1.1rem;
+			}
+			#information .info-label {
+				display: block;
+				font-size: 0.7rem;
+				letter-spacing: 0.12rem;
+				text-transform: uppercase;
+				opacity: 0.6;
+				margin-bottom: 0.35rem;
+			}
+			#information .info-value {
+				font-size: 1.05rem;
+				border-bottom: none;
+			}
+			#information .info-value:hover {
+				border-bottom-color: rgba(255, 255, 255, 0.5);
+			}
+			#information .info-resume h3 {
+				margin: 0 0 0.75rem 0;
+				font-size: 1.1rem;
+				letter-spacing: 0.15rem;
+				text-transform: uppercase;
+			}
+			#information .info-resume > p {
+				margin-top: 0;
+				margin-bottom: 1.25rem;
+				opacity: 0.75;
+				font-size: 0.95rem;
+			}
+			#information .resume-viewer {
+				border: 1px solid rgba(255, 255, 255, 0.25);
+				border-radius: 4px;
+				background: rgba(0, 0, 0, 0.25);
+				min-height: 28rem;
+				margin-bottom: 1.5rem;
+				overflow: hidden;
+			}
+			#information .resume-embed {
+				display: block;
+				width: 100%;
+				height: 28rem;
+				border: 0;
+			}
+			#information .resume-actions {
+				margin-bottom: 0;
+			}
+			@media screen and (max-width: 736px) {
+				#information .info-panel {
+					padding: 1.5rem;
+				}
+				#information .info-row {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 0.75rem;
+				}
+				#information .resume-viewer,
+				#information .resume-embed {
+					min-height: 20rem;
+					height: 20rem;
 				}
 			}
 		</style>
@@ -59,13 +300,10 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo" style="display: flex; align-items: center; justify-content: center; line-height: normal;">
-							<img src="images/cup1.png" alt="Cup" style="max-width: 50%; max-height: 50%; width: auto; height: auto; object-fit: contain;" />
-						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>GABRIEL MICHAEL</h1>
-								<p>A Portfolio Website.</p>
+								<p>A Portfolio Website</p>
 							</div>
 						</div>
 						<nav>
@@ -73,7 +311,7 @@
 								<li><a href="#intro">Portfolio</a></li>
 								<li><a href="#work">Projects</a></li>
 								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="#information">Information</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -87,34 +325,34 @@
 								<h2 class="major">Portfolio</h2>
 								<div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0;">
 									<div class="portfolio-item">
-										<img src="images/Cherry blosums.jpeg" alt="Portfolio Image 1" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
+										<img src="images/2paqth.jpeg" alt="Portfolio Image 1" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
 									</div>
 									<div class="portfolio-item">
-										<img src="images/rose 2.png" alt="Portfolio Image 2" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
+										<img src="images/fav.JPEG" alt="Portfolio Image 2" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
 									</div>
 									<div class="portfolio-item">
-										<img src="images/street.jpeg" alt="Portfolio Image 3" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
+										<img src="images/bridge.jpg" alt="Portfolio Image 3" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
+									</div>
+									<div class="portfolio-item">
+										<img src="images/anim.jpg" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
+									</div>
+									<div class="portfolio-item">
+										<img src="images/Coffee 2.jpg" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
+									</div>
+									<div class="portfolio-item">
+										<img src="images/crain.jpeg" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
+									</div>
+									<div class="portfolio-item">
+										<img src="images/Humanity's Lifeblood.PNG" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
+									</div>
+									<div class="portfolio-item">
+										<img src="images/menp.jpg" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
+									</div>
+									<div class="portfolio-item">
+										<img src="images/heyman].JPEG" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
 									</div>
 									<div class="portfolio-item">
 										<img src="images/cargill.JPG" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
-									</div>
-									<div class="portfolio-item">
-										<img src="images/me.JPG" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
-									</div>
-									<div class="portfolio-item">
-										<img src="images/bird.JPG" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
-									</div>
-									<div class="portfolio-item">
-										<img src="images/cool.JPG" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
-									</div>
-									<div class="portfolio-item">
-										<img src="images/New Park.jpeg" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
-									</div>
-									<div class="portfolio-item">
-										<img src="images/MeC.JPG" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
-									</div>
-									<div class="portfolio-item">
-										<img src="images/Rose.png" alt="Portfolio Image" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
 									</div>
 								</div>
 							</article>
@@ -122,91 +360,95 @@
 						<!-- Projects -->
 							<article id="work">
 								<h2 class="major">Projects</h2>
-								
-								<div class="project-item" style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-									<div style="flex: 1;">
-										<h3 style="margin-top: 0; margin-bottom: 1rem;">Personal Video Essay Channel</h3>
-										<p>This is my personal channel where I post baseball related video essays. I have developed my own unique style that has allowed me to accrue 2500 subscribers with only three videos. One of them collected over 40,000 views with another collecting 20,000. They are indicative of my ability to work and adapt to creative ideas. </p>
-									</div>
-									<div style="flex-shrink: 0;">
-										<a href="https://www.youtube.com/@welcometobaseball" target="_blank" rel="noopener noreferrer">
-											<img src="images/WTBB.png" alt="Project Logo 1" style="width: 150px; height: 150px; object-fit: contain; border-radius: 4px; cursor: pointer;" />
-										</a>
-									</div>
-								</div>
 
-								<div class="project-item" style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-									<div style="flex: 1;">
-										<h3 style="margin-top: 0; margin-bottom: 1rem;">Freelance Work</h3>
-										<p>This is my work for a channel with over 180,000 subscribers. I have made more than these three, but these are my favorites. They have all gotten around 100k views. Along with the owner of the channel enjoying my work to the point where he let me post my own video, <i>see the third thumbnail</i>.</p>
-									</div>
-									<div style="flex-shrink: 0; display: flex; flex-direction: column; gap: 1rem; width: 200px;">
-										<a href="https://www.youtube.com/watch?v=GpCZqKnPzxQ" target="_blank" rel="noopener noreferrer" style="display: block;">
-											<img src="images/vald.jpg" alt="Project Image 1" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
-										</a>
-										<a href="https://www.youtube.com/watch?v=dC_QAEnZ124" target="_blank" rel="noopener noreferrer" style="display: block;">
-											<img src="images/mookie.jpg" alt="Project Image 2" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
-										</a>
-										<a href="https://www.youtube.com/watch?v=SM7APslBUw8" target="_blank" rel="noopener noreferrer" style="display: block;">
-											<img src="images/harp.jpg" alt="Project Image 3" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; cursor: pointer;" />
-										</a>
-									</div>
-								</div>
-
-								<div class="project-item" style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 3rem;">
+								<div class="project-item">
 									<div style="flex: 1;">
 										<h3 style="margin-top: 0; margin-bottom: 1rem;">Short Films</h3>
-										<p>This is a secondary channel I own where I work to post more personal and miscellaneous vidoes. Those include my short films.</p>
+										<p>This is my main channel where I post my own films. This includes a short film titled DASHIN. Shot in a documentary style, this film shows off a DoorDasher’s daily tasks with a comedic spin. The film allowed me to prove that I can capture a workday while still keeping the audience's attention.</p>
 									</div>
-									<div style="flex-shrink: 0;">
-										<a href="https://www.youtube.com/@TheKinTimeCapsule" target="_blank" rel="noopener noreferrer">
-											<img src="images/Kin.png" alt="Project Logo 3" style="width: 200px; height: 200px; object-fit: contain; border-radius: 4px; cursor: pointer;" />
+									<div class="project-item-logo">
+										<a href="https://www.youtube.com/@gabrielmichaeI" target="_blank" rel="noopener noreferrer">
+											<img src="images/channels4_profile.jpg" alt="Project Logo 3" class="project-profile-img" />
 										</a>
 									</div>
 								</div>
+
+								<div class="project-item">
+									<div style="flex: 1;">
+										<h3 style="margin-top: 0; margin-bottom: 1rem;">Freelance Work</h3>
+										<p>This is my work for a channel with over 180,000 subscribers. I have made more than these three, but these are my favorites with one reaching almost 350,000 views. The appreciation of my work culminated in the owner of the channel to give me a shot at my own video, <i>see the third thumbnail</i>.</p>
+									</div>
+									<div class="project-item-thumbs">
+										<a href="https://www.youtube.com/watch?v=GpCZqKnPzxQ" target="_blank" rel="noopener noreferrer">
+											<img src="imag/vald.jpg" alt="Project Image 1" class="project-thumb" />
+										</a>
+										<a href="https://www.youtube.com/watch?v=dC_QAEnZ124" target="_blank" rel="noopener noreferrer">
+											<img src="imag/mookie.jpg" alt="Project Image 2" class="project-thumb" />
+										</a>
+										<a href="https://www.youtube.com/watch?v=SM7APslBUw8" target="_blank" rel="noopener noreferrer">
+											<img src="imag/harp.jpg" alt="Project Image 3" class="project-thumb" />
+										</a>
+									</div>
+								</div>
+								<div class="project-item">
+									<div style="flex: 1;">
+										<h3 style="margin-top: 0; margin-bottom: 1rem;">Personal Video Essay Channel</h3>
+										<p>This is my personal channel where I post baseball related video essays. I have developed my own unique style that has allowed me to accrue 2500 subscribers with only three videos. One of them collected over 40,000 views with another collecting 20,000. They are indicative of my ability to create an audience on social media. </p>
+									</div>
+									<div class="project-item-logo">
+										<a href="https://www.youtube.com/@welcometobaseball" target="_blank" rel="noopener noreferrer">
+											<img src="images/WTBB.png" alt="Project Logo 1" class="project-logo-img" />
+										</a>
+									</div>
+								</div>
+
+
 							</article>
 
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
-								<img src="images/gabe.png" alt="Headshot" style="width: 300px; height: 300px; object-fit: cover; border-radius: 4px; float: right; margin-left: 2rem; margin-bottom: 1rem;" />
-								<p>My name is Gabriel Michael and I am a senior at the Univeristy of Binghamton. I am a soon to graduate student studying Film. I am making this website to be able to share my work and have it all condensed in one area. I am open and ready to work in all areas of photography, film, or YouTube videos.</p>
-								<p>Let me know of any potential projects you would think I would be a good fit for. Even if you have nothing in mind, I appreciate you taking the time to check out my work.</p>
+								<img src="images/headshot.jpeg" alt="Headshot" class="about-headshot" style="width: 300px; height: 300px; object-fit: cover; object-position: 32% center; border-radius: 4px; float: right; margin-left: 2rem; margin-bottom: 1rem;" />
+								<p>My name is Gabriel Michael and I am a film graduate from the University of Binghamton. I am making this website to be able to have my work all condensed in one area. I am open and ready to work in all areas of photography, film, or social media content.</p>
+								<p>Let me know of any potential projects you would think I would be a good fit for. I appreciate you taking the time to check out my work, if you would like to see a resume or contact info that will be in the information section.</p>
 								<div style="clear: both; margin-top: 2rem; text-align: right;">
-									<img src="images/signature.png" alt="Signature" style="max-width: 300px; height: auto; opacity: 0.9;" />
+									<img src="imag/signature.png" alt="Signature" style="max-width: 300px; height: auto; opacity: 0.9;" />
 								</div>
 							</article>
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form id="contact-form" method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" required />
+						<!-- Information -->
+							<article id="information">
+								<h2 class="major">Information</h2>
+								<div class="info-panel">
+									<p>Reach out for collaborations, freelance work, or any questions about my portfolio.</p>
+									<div class="info-details">
+										<div class="info-row">
+											<span class="icon solid fa-envelope" aria-hidden="true"></span>
+											<div>
+												<span class="info-label">Email</span>
+												<a href="mailto:gabriel.michaelx04@gmail.com" class="info-value">gabriel.michaelx04@gmail.com</a>
+											</div>
 										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="email" name="email" id="email" required />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4" required></textarea>
+										<div class="info-row">
+											<span class="icon solid fa-phone" aria-hidden="true"></span>
+											<div>
+												<span class="info-label">Phone</span>
+												<a href="tel:+15162546574" class="info-value">516-254-6574</a>
+											</div>
 										</div>
 									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" id="submit-btn" /></li>
-										<li><input type="reset" value="Reset" /></li>
+								</div>
+								<section class="info-resume">
+									<h3>Resume</h3>
+									<p>View or download my resume below.</p>
+									<div class="resume-viewer">
+										<iframe src="images/Resume 2025 Updated.pdf" title="Gabriel Michael Resume" class="resume-embed"></iframe>
+									</div>
+									<ul class="actions resume-actions">
+										<li><a href="images/Resume 2025 Updated.pdf" class="button primary icon solid fa-file-pdf" target="_blank" rel="noopener noreferrer">View Resume</a></li>
+										<li><a href="images/Resume 2025 Updated.pdf" class="button icon solid fa-download" download>Download PDF</a></li>
 									</ul>
-									<div id="form-status" style="margin-top: 1rem; display: none;"></div>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
+								</section>
 							</article>
 
 						<!-- Elements -->
@@ -265,7 +507,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<li>Etiam vel felis lorem.</li>
 										<li>Felis enim et feugiat.</li>
 									</ol>
-									
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
 
 									<h4>Actions</h4>
 									<ul class="actions">
@@ -463,59 +711,5 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-			<script type="text/javascript">
-				(function() {
-					// Initialize EmailJS with your public key
-					// Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key
-					emailjs.init("YOUR_PUBLIC_KEY");
-					
-					// Handle form submission
-					document.getElementById('contact-form').addEventListener('submit', function(event) {
-						event.preventDefault();
-						
-						var submitBtn = document.getElementById('submit-btn');
-						var statusDiv = document.getElementById('form-status');
-						
-						// Disable submit button
-						submitBtn.disabled = true;
-						submitBtn.value = 'Sending...';
-						statusDiv.style.display = 'block';
-						statusDiv.innerHTML = 'Sending message...';
-						statusDiv.style.color = '#ffffff';
-						
-						// Get form data
-						var templateParams = {
-							from_name: document.getElementById('name').value,
-							from_email: document.getElementById('email').value,
-							message: document.getElementById('message').value,
-							to_email: 'gabriel.michaelx04@gmail.com'
-						};
-						
-						// Send email
-						// Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS service and template IDs
-						emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-							.then(function(response) {
-								statusDiv.innerHTML = 'Message sent successfully!';
-								statusDiv.style.color = '#4ade80';
-								document.getElementById('contact-form').reset();
-								submitBtn.disabled = false;
-								submitBtn.value = 'Send Message';
-								setTimeout(function() {
-									statusDiv.style.display = 'none';
-								}, 5000);
-							}, function(error) {
-								statusDiv.innerHTML = 'Failed to send message. Please try again or email directly at gabriel.michaelx04@gmail.com';
-								statusDiv.style.color = '#ef4444';
-								submitBtn.disabled = false;
-								submitBtn.value = 'Send Message';
-							});
-					});
-				})();
-			</script>
-
 	</body>
 </html>
-
-
-
